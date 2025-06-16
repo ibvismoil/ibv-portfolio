@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import React from 'react'; 
 import Projects from '../components/Projects';
 import Tech from '../components/Tech';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
       <Hero/>
       <Tech/>
       <Projects/>
+      <Contact/>
+      <Footer/>
     </>
   )
 }

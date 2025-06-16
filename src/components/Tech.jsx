@@ -3,7 +3,7 @@ import { CSSIcon, FIGMAIcon, GitBashIcon, GitHubIcon, HTMLIcon, JSIcon, NextJSIc
 
 const Tech = () => {
     return (
-        <div className='containers justify-center items-center text-center'>
+        <div id='skills' className='containers justify-center items-center text-center'>
             <h1 className='text-3xl font-semibold'>My Tech Stack</h1>
             <div className="items-center gap-8 mt-8 grid grid-cols-6 flex-wrap justify-center text-center">
                 <span className='w-[140px] h-[130px]'><HTMLIcon /></span>

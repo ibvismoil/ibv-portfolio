@@ -3,7 +3,7 @@ import React from 'react';
 const Hero = () => {
 
   return (
-    <section className="containers h-screen flex flex-col justify-center items-center text-center px-4">
+    <section id='home' className="containers h-screen flex flex-col justify-center items-center text-center px-4">
       <h1>
         <span className="text-5xl font-semibold">Front-end Developer</span><br />
         <span className="text-4xl font-semibold text-gray-500 dark:text-gray-400">
