@@ -61,7 +61,7 @@ const ContactForm = () => {
 
 
     return (
-        <div className='containers '>
+        <div id='contact' className='containers '>
             <h1 className="text-3xl font-bold mt-5 mb-6 justify-center items-center text-center">Contact</h1>
             <div className='flex justify-between m-auto w-[1000px]'>
                 <div>
