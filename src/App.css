@@ -1,0 +1,35 @@
+*{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.containers{
+  width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+html.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+.test {
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.theme-toggle-btn.rotate {
+  animation: spin 0.4s ease;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
