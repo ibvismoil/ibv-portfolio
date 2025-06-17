@@ -1,4 +1,4 @@
-import { Instagram, LocationEdit, Mail, PhoneCall } from 'lucide-react';
+import { Download, Instagram, LocationEdit, Mail, PhoneCall } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { GitHubIcon, TelegramIcon } from '../assets/icon';
@@ -10,6 +10,17 @@ const ContactForm = () => {
     const handleChange = (e) => {
         setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
     };
+
+ 
+        const handleDownload = () => {
+            const link = document.createElement('a');
+            link.href = '/files/Ibrgimov Ismoil.pdf'; // путь к файлу в public/
+            link.download = 'Ibrgimov Ismoil.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        };
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -94,9 +105,12 @@ const ContactForm = () => {
                         </div>
                     </div>
                     <div className="flex items-center gap-4 mt-2 p-4 rounded-lg border">
-                        <Link to="https://github.com/ibvismoil"><span><GitHubIcon className='w-[24px] h-[24px]'/></span></Link>
-                        <Link to="https://www.instagram.com/ibragimov.carsuz?igsh=MW5mem1qc3NqZHBpaw=="><span><Instagram className='w-[24px] h-[24px]'/></span></Link>
-                        <Link to="https://t.me/ibvismoil"><span><TelegramIcon className='w-[24px] test h-[24px]'/></span></Link>
+                        <Link to="https://github.com/ibvismoil"><span><GitHubIcon className='w-[24px] h-[24px]' /></span></Link>
+                        <Link to="https://www.instagram.com/ibragimov.carsuz?igsh=MW5mem1qc3NqZHBpaw=="><span><Instagram className='w-[24px] h-[24px]' /></span></Link>
+                        <Link to="https://t.me/ibvismoil"><span><TelegramIcon className='w-[24px] test h-[24px]' /></span></Link>
+                        <button className='cursor-pointer text-gray-400 hover:text-gray-200 text-sm flex gap-2 items-center' onClick={handleDownload}>
+                            Download Resume <Download width={15} height={15}/>
+                        </button>
                     </div>
                 </div>
                 <div>
