@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { toggleTheme } from '../cods/theme.js';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import React from 'react';
 import { MoonIcon, SunIcon } from '../assets/icon.jsx';
 
@@ -24,41 +24,40 @@ function Navbar() {
     setIsDark(prev => !prev);
   };
 
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 shadow backdrop-blur-md border-b border-gray-300 dark:border-gray-700">
-      <nav className='flex containers justify-between items-center'>
-        <div className='flex text-center gap-4'>
-          <button className='cursor-pointer' onClick={() => { document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' }); }}>
-            Scills
+    <header className="fixed top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 shadow backdrop-blur-md border-b border-gray-300 dark:border-gray-700">
+      <nav className="flex items-center justify-between containers whitespace-nowrap ">
+        <div className="flex items-center gap-4 text-sm sm:text-base">
+          <button className="cursor-pointer hover:underline transition" onClick={() => scrollTo('skills')}>
+            Skills
           </button>
-          <button className='cursor-pointer' onClick={() => { document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }); }}>
-            Project
+          <button className="cursor-pointer hover:underline transition" onClick={() => scrollTo('projects')}>
+            Projects
           </button>
-          <button className='cursor-pointer' onClick={() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+          <button className="cursor-pointer hover:underline transition" onClick={() => scrollTo('contact')}>
             Contact
-          </button>          
-          <button className='cursor-pointer' onClick={() => { document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' }); }}>
+          </button>
+          <button className="cursor-pointer hover:underline transition" onClick={() => scrollTo('home')}>
             Home
           </button>
-
         </div>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
-          <button
-            onClick={() => {
-              handleToggleTheme();
-              const btn = document.querySelector('.theme-toggle-btn');
-              btn.classList.add('rotate');
-              setTimeout(() => {
-                btn.classList.remove('rotate');
-              }, 500);
-            }}
-            className="theme-toggle-btn"
-            style={{ fontSize: '1.4rem', transition: 'transform 0.4s ease', background: 'none', border: 'none', cursor: 'pointer', }}>
-            {isDark ? <MoonIcon /> : <SunIcon />}
-          </button>
-        </div>
+        <button
+          onClick={() => {
+            handleToggleTheme();
+            const btn = document.querySelector('.theme-toggle-btn');
+            btn.classList.add('rotate');
+            setTimeout(() => {
+              btn.classList.remove('rotate');
+            }, 600);
+          }}
+          className="theme-toggle-btn text-xl appearance-none transition-transform duration-300 ease-in-out hover:scale-110 hover:text-amber-300  ">
+          {isDark ? <MoonIcon /> : <SunIcon />}
+        </button>
       </nav>
-
     </header>
   );
 }

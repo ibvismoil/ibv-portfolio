@@ -1,30 +1,37 @@
-import React from 'react'
-import { CSSIcon, FIGMAIcon, GitBashIcon, GitHubIcon, HTMLIcon, JSIcon, NextJSIcon, NodeJSIcon, NPMIcon, ReactIcon, SASSIcon, ShadcnUiIcon, TailwindCSSIcon, TSIcon, VercelIcon,  } from '../assets/icon'
+import React from 'react';
+import {
+  CSSIcon, FIGMAIcon, GitBashIcon, GitHubIcon, HTMLIcon, JSIcon,
+  NextJSIcon, NodeJSIcon, NPMIcon, ReactIcon, SASSIcon, ShadcnUiIcon,
+  TailwindCSSIcon, TSIcon, VercelIcon,
+} from '../assets/icon';
 
 const Tech = () => {
-    return (
-        <div id='skills' className='containers justify-center items-center text-center'>
-            <h1 className='text-3xl font-semibold'>My Tech Stack</h1>
-            <div className="items-center gap-8 mt-8 grid grid-cols-6 flex-wrap justify-center text-center">
-                <span className='w-[140px] h-[130px]'><HTMLIcon /></span>
-                <span className='w-[140px] h-[130px]'><CSSIcon /></span>
-                <span className='w-[140px] h-[130px]'><JSIcon /></span>
-                <span className='w-[140px] h-[130px]'><GitBashIcon /></span>
-                <span className='w-[140px] h-[130px]'><TailwindCSSIcon /></span>
-                <span className='w-[140px] h-[130px]'><ReactIcon /></span>
-                <span className='w-[140px] h-[130px]'><NextJSIcon /></span>
-                <span className='w-[140px] h-[130px] test '><GitHubIcon /></span>
-                <span className='w-[140px] h-[130px] test '><ShadcnUiIcon /></span>
-                <span className='w-[140px] h-[130px]'><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" /></span>
-                <span className='w-[140px] h-[130px] test '><NodeJSIcon /></span>
-                <span className='w-[140px] h-[130px] test '><NPMIcon /></span>
-                <span className='w-[140px] h-[130px] test '><SASSIcon /></span>
-                <span className='w-[140px] h-[130px] test '><VercelIcon /></span>
-                <span className='w-[140px] h-[130px] test '><FIGMAIcon /></span>
-                <span className='w-[140px] h-[130px] test '><TSIcon /></span>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div id='skills' className='containers justify-center items-center text-center'>
+      <h1 className='text-3xl font-semibold'>My Tech Stack</h1>
+      <div className="mt-8 flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20'><HTMLIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20'><CSSIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20'><JSIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20 max-[640px]:hidden'><GitBashIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20'><TailwindCSSIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20'><ReactIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20'><NextJSIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20'><GitHubIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20 max-[640px]:hidden'><ShadcnUiIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20'>
+    <img title='VSCode' src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+  </span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20 max-[500px]:hidden'><NodeJSIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20 max-[500px]:hidden'><NPMIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20 max-[640px]:hidden'><SASSIcon /></span>
+  <span className='w-28 h-28 max-[850px]:hidden'><VercelIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20'><FIGMAIcon /></span>
+  <span className='w-28 h-28 max-[640px]:w-20 max-[640px]:h-20'><TSIcon /></span>
+</div>
 
-export default Tech
+    </div>
+  );
+};
+
+export default Tech;
