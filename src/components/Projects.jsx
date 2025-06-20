@@ -29,6 +29,14 @@ const projectData = [
     link: 'https://adminpanel-two-snowy.vercel.app',
     github: 'https://github.com/ibvismoil/5-oy-imtxon',
     error: ''
+  }, {
+    title: 'Mafia Games',
+    description: 'Mafia games ',
+    img: 'https://res.cloudinary.com/dfjlyazf5/image/upload/v1750431141/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2025-06-19_105655_dq3kkl.png',
+    tech: ['Vite js - front', 'Next js - server'],
+    link: '',
+    github: 'https://github.com/ibvismoil/mafia-games',
+    error: 'There is no deployment'
   },
 ];
 
@@ -44,8 +52,16 @@ const Projects = () => {
             <p className="text-sm my-2 text-gray-300">{project.description}</p>
             <p className="text-xs mb-2 text-gray-400">Tech: {project.tech.join(', ')}</p>
             <div className="flex gap-4 text-sm justify-between text-blue-400">
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex gap-1 hover:underline"><LinkIcon />Demo</a>
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex gap-1 hover:underline"><Github width='18px' height='18px' />GitHub</a>
+              {project.link && (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex gap-1 hover:underline">
+                  <LinkIcon />Demo
+                </a>
+              )}
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex gap-1 hover:underline">
+                  <Github width="18px" height="18px" />GitHub
+                </a>
+              )}
             </div>
             {project.error && <p className='text-red-500 mt-2 text-sm'>{project.error}</p>}
           </div>
