@@ -27,7 +27,7 @@ function Navbar() {
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
-
+  
   return (
     <header className="fixed top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 shadow backdrop-blur-md border-b border-gray-300 dark:border-gray-700">
       <nav className="flex items-center justify-between containers whitespace-nowrap ">

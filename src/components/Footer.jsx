@@ -4,10 +4,7 @@ const Footer = () => {
   return (
     <div className='containers'>
       <div>
-        <div className="bg-red-500 w-[140px] h-[130px] max-[850px]:hidden">
-  Я пропаду на ширине меньше 850px
-</div>
-
+        <p className='text-center text-gray-500 text-sm py-4'>© 2025 ismoil portfolio. All rights reserved.</p>
       </div>
     </div>
   )

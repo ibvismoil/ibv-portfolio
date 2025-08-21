@@ -1,6 +1,7 @@
 import React from 'react'
 import { LinkIcon } from '../assets/icon';
 import { Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const projectData = [
   {
@@ -31,12 +32,13 @@ const projectData = [
     error: ''
   }, {
     title: 'Mafia Games',
-    description: 'Mafia games ',
-    img: 'https://res.cloudinary.com/dfjlyazf5/image/upload/v1750431141/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2025-06-19_105655_dq3kkl.png',
-    tech: ['Vite js - front', 'Next js - server'],
-    link: '',
-    github: 'https://github.com/ibvismoil/mafia-games',
-    error: 'There is no deployment'
+    description: 'This is an online store for selling flowers',
+    img: 'https://res.cloudinary.com/dfjlyazf5/image/upload/v1755756784/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2025-08-21_110949_wxovpg.png',
+    tech: ['Vite js - frontend', 'Payload CMS - backend'],
+    link: 'https://flower-shop-two-chi.vercel.app/',
+    github: 'https://github.com/ibvismoil/Flower-Shop',
+    error: 'In development',
+    backend: 'https://flower-backend-betav2.vercel.app'
   },
 ];
 
@@ -64,6 +66,7 @@ const Projects = () => {
               )}
             </div>
             {project.error && <p className='text-red-500 mt-2 text-sm'>{project.error}</p>}
+            {project.backend && <Link to={project.backend} className='text-blue-400 hover:underline text-sm'>Backend</Link>}
           </div>
         ))}
       </div>
