@@ -13,7 +13,7 @@ const Hero = () => {
       </h1>
 
       <h3 className="mt-4 text-base max-w-3xl leading-relaxed max-[450px]:text-xs">
-        I’m a Front-end Developer focused on building responsive, accessible, and visually appealing web interfaces using modern technologies like React, JavaScript, Node.js, and Tailwind CSS. I value clean, efficient code and seamless user experiences. Always learning and improving, I strive to deliver fast, user-friendly websites that perform well on any device.
+        I’m a Front-end Developer focused on building responsive, accessible, and visually appealing web interfaces using modern technologies like HTML, CSS, React, JavaScript, Node.js, and Tailwind CSS. I value clean, efficient code and seamless user experiences. Always learning and improving, I strive to deliver fast, user-friendly websites that perform well on any device.
       </h3>
     </section>
   );

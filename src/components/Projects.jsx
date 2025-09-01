@@ -119,8 +119,8 @@ const Projects = () => {
               transition={{ duration: 0.4, delay: index * 0.05 }}>
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <img className='border rounded-xl h-40 object-cover w-full' src={project.img} alt={project.title} />
-              <p className="text-sm my-2 text-gray-300">{project.description}</p>
-              <p className="text-xs mb-2 text-gray-400">Tech: {project.tech.join(', ')}</p>
+              <p className="text-sm my-2">{project.description}</p>
+              <p className="text-xs mb-2 text-gray-600">Tech: {project.tech.join(', ')}</p>
               <div className="flex gap-4 text-sm justify-between text-blue-400">
                 {project.link && (
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex gap-1 hover:underline">

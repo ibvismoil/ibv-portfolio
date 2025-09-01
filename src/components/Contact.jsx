@@ -117,7 +117,7 @@ const ContactForm = () => {
                             <h1 className='mb-2'>My Age: {age}</h1>
                             <hr className='' />
                             <p className="text-sm mt-2">Location</p>
-                            <p className="font-semibold max-[500px]:text-xs">Uzbekistan, Tashkent, <br /> Mirzo Ulugbek, Parkent 2/39</p>
+                            <p className="font-semibold max-[500px]:text-xs">Uzbekistan, Tashkent, <br /> Mirzo Ulugbek, Parkent 2</p>
                         </div>
                     </div>
 
